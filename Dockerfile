@@ -4,4 +4,6 @@ ENV MYSQL_ROOT_PASSWORD=shooting
 
 ENV MYSQL_DATABASE=test
 
+RUN echo 'testing new build'
+
 ADD ./script.sql /docker-entrypoint-initdb.d
