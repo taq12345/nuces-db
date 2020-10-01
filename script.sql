@@ -21,10 +21,10 @@ USE `test`;
 -- Table structure for table `applicants`
 --
 
-DROP TABLE IF EXISTS `applicants`;
+-- DROP TABLE IF EXISTS `applicants`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `applicants` (
+CREATE TABLE IF NOT EXISTS `applicants` (
   `jobId` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
   KEY `Applicants_fk0` (`jobId`),
@@ -38,10 +38,10 @@ CREATE TABLE `applicants` (
 -- Table structure for table `connections`
 --
 
-DROP TABLE IF EXISTS `connections`;
+-- DROP TABLE IF EXISTS `connections`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `connections` (
+CREATE TABLE IF NOT EXISTS `connections` (
   `id1` int(11) NOT NULL,
   `id2` int(11) NOT NULL,
   `Status` varchar(20) NOT NULL,
@@ -56,10 +56,10 @@ CREATE TABLE `connections` (
 -- Table structure for table `jobs`
 --
 
-DROP TABLE IF EXISTS `jobs`;
+-- DROP TABLE IF EXISTS `jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `jobs` (
+CREATE TABLE IF NOT EXISTS `jobs` (
   `userId` int(11) NOT NULL,
   `Title` varchar(20) NOT NULL,
   `Description` varchar(20) NOT NULL,
@@ -77,10 +77,10 @@ CREATE TABLE `jobs` (
 -- Table structure for table `qualifications`
 --
 
-DROP TABLE IF EXISTS `qualifications`;
+-- DROP TABLE IF EXISTS `qualifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `qualifications` (
+CREATE TABLE IF NOT EXISTS `qualifications` (
   `id` int(11) NOT NULL,
   `Accomplishments` varchar(20) NOT NULL,
   `Skills` varchar(20) NOT NULL,
@@ -95,10 +95,10 @@ CREATE TABLE `qualifications` (
 -- Table structure for table `recommendations`
 --
 
-DROP TABLE IF EXISTS `recommendations`;
+-- DROP TABLE IF EXISTS `recommendations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `recommendations` (
+CREATE TABLE IF NOT EXISTS `recommendations` (
   `id1` int(11) NOT NULL,
   `id2` int(11) NOT NULL,
   `Recommendation` varchar(20) NOT NULL,
@@ -113,10 +113,10 @@ CREATE TABLE `recommendations` (
 -- Table structure for table `statuses`
 --
 
-DROP TABLE IF EXISTS `statuses`;
+-- DROP TABLE IF EXISTS `statuses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `statuses` (
+CREATE TABLE IF NOT EXISTS `statuses` (
   `statusId` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(11) DEFAULT NULL,
   `Status` varchar(255) NOT NULL,
@@ -130,10 +130,10 @@ CREATE TABLE `statuses` (
 -- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
+-- DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` int(11) NOT NULL,
   `FName` varchar(20) CHARACTER SET utf8mb4 NOT NULL,
