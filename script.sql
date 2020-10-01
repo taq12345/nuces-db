@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `recommendations` (
 --
 
 -- DROP TABLE IF EXISTS `statuses`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET @saved_cs_client    = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE IF NOT EXISTS `statuses` (
   `statusId` int(11) NOT NULL AUTO_INCREMENT,
